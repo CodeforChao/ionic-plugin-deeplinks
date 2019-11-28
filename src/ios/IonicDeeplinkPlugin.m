@@ -42,11 +42,11 @@
     return NO;
   }
 
-  // if (![[url scheme] isEqualToString:@"https"]) {
-  // NSLog(@"IonicDeepLinkPlugin: Scheme not for deeplink: %@", [url scheme]);
+  if (![[url scheme] isEqualToString:@"https"]) {
+  NSLog(@"IonicDeepLinkPlugin: Scheme not for deeplink: %@", [url scheme]);
 
-  // return NO;
-  // }
+  return NO;
+  }
 
   _lastEvent = [self createResult:url];
 
