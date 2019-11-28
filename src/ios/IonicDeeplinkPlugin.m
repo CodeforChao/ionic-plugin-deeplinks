@@ -42,6 +42,12 @@
     return NO;
   }
 
+  if (![[url scheme] isEqualToString:@"https"]) {
+  NSLog(@"IonicDeepLinkPlugin: Scheme not for deeplink: %@", [url scheme]);
+
+  return NO;
+  }
+
   _lastEvent = [self createResult:url];
 
   [self sendToJs];
