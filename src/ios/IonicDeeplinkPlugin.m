@@ -37,15 +37,9 @@
 
 - (BOOL)handleLink:(NSURL *)url {
   NSLog(@"IonicDeepLinkPlugin: Handle link (internal) %@", url);
-  
+  return NO;
   if(![self checkUrl:url]) {
     return NO;
-  }
-
-  if (![[url scheme] isEqualToString:@"https"]) {
-  NSLog(@"IonicDeepLinkPlugin: Scheme not for deeplink: %@", [url scheme]);
-
-  return NO;
   }
 
   _lastEvent = [self createResult:url];
