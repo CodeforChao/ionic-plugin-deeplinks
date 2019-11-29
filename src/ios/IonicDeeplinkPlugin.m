@@ -37,7 +37,6 @@
 
 - (BOOL)handleLink:(NSURL *)url {
   NSLog(@"IonicDeepLinkPlugin: Handle link (internal) %@", url);
-  return NO;
   if(![self checkUrl:url]) {
     return NO;
   }
