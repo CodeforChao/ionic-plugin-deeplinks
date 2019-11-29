@@ -3,7 +3,9 @@ var argscheck = require('cordova/argscheck'),
   exec = require('cordova/exec');
 
 var PLUGIN_NAME = 'IonicDeeplinkPlugin';
-
+  /**
+   * This is test message
+   */
 var extend = function (out) {
   out = out || {};
 
