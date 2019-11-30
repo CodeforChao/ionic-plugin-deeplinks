@@ -60,6 +60,12 @@ public class IonicDeeplink extends CordovaPlugin {
   public void onNewIntent(Intent intent) {
     handleIntent(intent);
   }
+  @TargetApi(8)
+  @Override
+    public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+      handler.proceed();
+  }
+
 
   public void handleIntent(Intent intent) {
     final String intentString = intent.getDataString();
