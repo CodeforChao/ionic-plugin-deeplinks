@@ -185,12 +185,12 @@ var IonicDeeplink = {
   },
 
   _stripFragmentLeadingHash: function (fragment) {
-    var hs = fragment.indexOf('#');
-
-    if (hs > -1) {
-      fragment.slice(0, hs);
-    }
-
+    // var hs = fragment.indexOf('#');
+    
+    // if (hs > -1) {
+    //   fragment.slice(0, hs);
+    // }
+    fragment = fragment.replace('/#','');
     return fragment;
   },
 
