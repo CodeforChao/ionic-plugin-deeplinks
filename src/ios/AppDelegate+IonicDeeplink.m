@@ -16,12 +16,12 @@ static NSString *const PLUGIN_NAME = @"IonicDeeplinkPlugin";
 
 @end
 
-@implementation NSURLRequest(DataController) 
-+ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host 
-{ 
-return YES; 
-} 
-@end
+// @implementation NSURLRequest(DataController) 
+// + (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host 
+// { 
+// return YES; 
+// } 
+// @end
 @implementation AppDelegate (IonicDeeplinkPlugin)
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
